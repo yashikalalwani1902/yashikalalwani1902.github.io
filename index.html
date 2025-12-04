@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yashika Lalwani | Portfolio</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Poppins", sans-serif; line-height: 1.6; background: #f7f7f7; }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 { font-size: 24px; }
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover { color: #00bcd4; }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #111, #333);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 { font-size: 48px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; margin-bottom: 20px; }
+        .btn {
+            padding: 12px 30px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .btn:hover { background: #0097a7; }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* About section */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about img {
+            width: 250px;
+            border-radius: 10px;
+        }
+        .about-text { max-width: 600px; }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .skill {
+            padding: 12px 20px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 16px;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .project-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .project-card a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+        .contact a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 32px; }
+            header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Yashika Lalwani</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h2>Frontend Developer</h2>
+        <p>I build clean UI, smooth user experiences, and modern web apps.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about">
+            <img src="https://i.imgur.com/6VBx3io.png" alt="Profile">
+            <div class="about-text">
+                <p>
+                    Hi, I'm <b>Yashika Lalwani</b>, a Frontend Developer with 1+ years of experience.
+                    I specialize in building scalable UI, reusable components, and seamless user experiences 
+                    using React.js, JavaScript, CSS, Material UI, and Redux.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React.js</div>
+            <div class="skill">Redux</div>
+            <div class="skill">Material UI</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Git</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>TaskFlow</h3>
+                <p>A smart task automation system with workflow builder and role-based access.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>SpendSense</h3>
+                <p>A personal finance dashboard with charts, budgeting, and smart alerts.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>NoteSync</h3>
+                <p>A cloud-based note app with sync, tagging, and offline-first design.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact">
+            <p>Email: <a href="mailto:yashika@example.com">yashika@example.com</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/yashika</a></p>
+            <p>GitHub: <a href="#">github.com/yashika</a></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Yashika Lalwani. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
