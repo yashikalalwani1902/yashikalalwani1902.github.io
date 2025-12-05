@@ -189,10 +189,14 @@
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      opacity: 0.7;
-      margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
     /* MOBILE FIXES */
@@ -213,13 +217,13 @@
 
   <script>
   function openAndDownload() {
-    const resumeURL = "https://yashikalalwani1902.github.io/assets/yashika_resume.pdf";
+    const resumeURL = "https://yashikalalwani1902.github.io/yashika_resume.pdf";
 
     window.open(resumeURL, "_blank");
 
     const a = document.createElement("a");
     a.href = resumeURL;
-    a.download = "Yashika-Lalwani-Resume.pdf";  // Name of downloaded file
+    a.download = "Yashika-Lalwani-Resume.pdf"; 
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
