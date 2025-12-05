@@ -195,6 +195,17 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
+    .project-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.3s ease;
+  }
+
+    .project-img:hover {
+      transform: scale(1.02);
+    }
 
     .project-card {
       background: #1a1a1a;
@@ -358,14 +369,16 @@
 
       <div class="project-card">
         <h3>Travel AI</h3>
+        <img src="./travel-ai.png" alt="Travel AI Screenshot" class="project-img" />
         <p>AI-powered travel planner that generates itineraries, optimizes budgets, and suggests destinations based on user preferences.</p>
         <a class="btn" href="https://travel-ai-swart.vercel.app/" target="_blank">View Project</a>
       </div>
 
       <div class="project-card">
         <h3>QueryCraft</h3>
+        <img src="./QueryCraft.png" alt="QueryCraft Screenshot" class="project-img" />
         <p>An interactive SQL learning playground with visual blocks, live query execution, and guided problem-solving.</p>
-        <a class="btn" href="https://sql-blocks.vercel.app/" target="_blank">View Project</a>
+        <a class="btn" href="https://query-craft-app.vercel.app/" target="_blank">View Project</a>
       </div>
 
     </div>
