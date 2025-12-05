@@ -4,10 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yashika Lalwani | Software Developer</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -16,6 +24,7 @@
       overflow-x: hidden;
     }
 
+    /* NAVBAR */
     header {
       display: flex;
       justify-content: space-between;
@@ -41,24 +50,42 @@
       text-decoration: none;
       color: #fff;
       font-weight: 400;
+      position: relative;
+      padding-bottom: 5px;
       transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #ffcc66;
+    /* Underline animation */
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: #ffcc66;
+      transition: width 0.3s ease;
     }
 
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO SECTION */
     #hero {
       height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 120px;
+      justify-content: center;
+      gap: 70px;
+      padding: 0 40px;
+      flex-wrap: wrap;
+      margin-top: 90px;
     }
 
     #hero-text {
-      max-width: 500px;
-      animation: fadeInUp 1s ease forwards;
+      max-width: 480px;
+      animation: fadeUp 1s ease forwards;
       opacity: 0;
     }
 
@@ -77,6 +104,7 @@
       font-size: 1rem;
       opacity: 0.8;
       margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     .btn {
@@ -100,22 +128,26 @@
       object-fit: cover;
       border: 4px solid #ffcc66;
       box-shadow: 0 0 40px rgba(255,204,102,0.3);
-      animation: fadeIn 1.3s ease forwards;
+      animation: fadeIn 1.4s ease forwards;
       opacity: 0;
     }
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px);} 
-      100% { opacity: 1; transform: translateY(0);} 
+    /* Scroll animations */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0;} 
-      100% { opacity: 1;} 
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
+    /* SECTION STYLES */
     section {
       padding: 80px 120px;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
     }
 
     h2.section-title {
@@ -124,6 +156,7 @@
       text-align: center;
     }
 
+    /* PROJECT CARDS */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -150,8 +183,23 @@
       opacity: 0.7;
       margin-bottom: 20px;
     }
+
+    /* MOBILE FIXES */
+    @media screen and (max-width: 768px) {
+      #hero {
+        text-align: center;
+        margin-top: 100px;
+      }
+      nav a {
+        margin-left: 15px;
+      }
+      section {
+        padding: 60px 30px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -163,23 +211,31 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section id="hero">
     <div id="hero-text">
       <h2>Hi, I'm Yashika!</h2>
       <h3>Software Developer</h3>
-      <p>I design and build clean, scalable, and user‑focused applications. I enjoy working across both frontend and backend to deliver complete, high‑quality solutions.</p>
-    <p style="text-align:center; margin-top:20px;">
-      <a href="github.com/yashikalalwani1902" target="_blank" style="color:#ffcc66; margin-right:20px; text-decoration:none; font-weight:500;">GitHub</a>
-      <a href="linkedin.com/in/yashikalalwani19 " target="_blank" style="color:#ffcc66; text-decoration:none; font-weight:500;">LinkedIn</a>
-    </p>
-      <a class="btn" href="YOUR_GOOGLE_DRIVE_RESUME_LINK" target="_blank">Download Resume</a>
+
+      <p>I design and build clean, scalable, and user-focused applications. I enjoy working across both frontend and backend to deliver complete, high-quality solutions.</p>
+
+      <p style="margin-top:20px;">
+        <a href="https://github.com/yashikalalwani1902" target="_blank" style="color:#ffcc66; margin-right:20px; text-decoration:none; font-weight:500;">GitHub</a>
+        <a href="https://linkedin.com/in/yashikalalwani19" target="_blank" style="color:#ffcc66; text-decoration:none; font-weight:500;">LinkedIn</a>
+      </p>
+
+      <a class="btn" href="YOUR_RESUME_LINK" target="_blank">Download Resume</a>
     </div>
-    <img src="YOUR_IMAGE.jpg" alt="Yashika's Photo" />
+
+    <img src="profile.jpg" alt="Yashika's Photo" />
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <h2 class="section-title">Featured Projects</h2>
+
     <div class="projects">
+
       <div class="project-card">
         <h3>Travel AI</h3>
         <p>AI-powered travel planner that generates itineraries, optimizes budgets, and suggests destinations based on user preferences.</p>
@@ -191,14 +247,15 @@
         <p>An interactive SQL learning playground with visual blocks, live query execution, and guided problem-solving.</p>
         <a class="btn" href="https://sql-blocks.vercel.app/" target="_blank">View Project</a>
       </div>
-    </div>
 
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2 class="section-title">Contact</h2>
-    <p style="text-align:center; font-size:1.1rem;">Let's connect! Reach me at:<br><br>
+    <p style="text-align:center; font-size:1.1rem;">
+      Let's connect! Reach me at:<br><br>
       <b>yashikalalwani5@gmail.com</b>
     </p>
   </section>
