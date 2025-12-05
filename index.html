@@ -156,6 +156,39 @@
       text-align: center;
     }
 
+    #skills {
+      text-align: center;
+      padding-top: 40px;
+    }
+    
+    #skills h3 {
+      margin: 25px 0 10px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    
+    .badge-wrap {
+      margin-bottom: 15px;
+    }
+    
+    #skills .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ffcc66, #ffb347);
+      color: #000;
+      box-shadow: 0 0 10px rgba(255,204,102,0.25);
+      transition: transform 0.25s ease;
+    }
+    
+    #skills .badge:hover {
+      transform: scale(1.1);
+    }
+
+
     /* PROJECT CARDS */
     .projects {
       display: grid;
@@ -248,6 +281,74 @@
 
     <img src="profile.png" alt="Yashika's Photo" />
   </section>
+
+  <!-- TECHNICAL SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="skills-group">
+    <h3>Languages</h3>
+    <div class="badge-wrap">
+      <span class="badge">JavaScript</span>
+      <span class="badge">TypeScript</span>
+      <span class="badge">Python</span>
+      <span class="badge">SQL</span>
+      <span class="badge">C/C++</span>
+    </div>
+
+    <h3>Frontend</h3>
+    <div class="badge-wrap">
+      <span class="badge">React</span>
+      <span class="badge">Next.js</span>
+      <span class="badge">Redux</span>
+      <span class="badge">Material-UI</span>
+      <span class="badge">Tailwind</span>
+      <span class="badge">Chart.js</span>
+    </div>
+
+    <h3>Backend</h3>
+    <div class="badge-wrap">
+      <span class="badge">Node.js</span>
+      <span class="badge">Express</span>
+      <span class="badge">FastAPI</span>
+      <span class="badge">REST APIs</span>
+      <span class="badge">WebSockets</span>
+    </div>
+
+    <h3>Databases</h3>
+    <div class="badge-wrap">
+      <span class="badge">MongoDB</span>
+      <span class="badge">PostgreSQL</span>
+      <span class="badge">MySQL</span>
+      <span class="badge">ClickHouse</span>
+    </div>
+
+    <h3>Cloud & DevOps</h3>
+    <div class="badge-wrap">
+      <span class="badge">AWS</span>
+      <span class="badge">Docker</span>
+      <span class="badge">GitHub Actions</span>
+    </div>
+
+    <h3>Testing</h3>
+    <div class="badge-wrap">
+      <span class="badge">Jest</span>
+      <span class="badge">RTL</span>
+      <span class="badge">Cypress</span>
+      <span class="badge">Mocha</span>
+      <span class="badge">Playwright</span>
+    </div>
+
+    <h3>Core</h3>
+    <div class="badge-wrap">
+      <span class="badge">Full-Stack Development</span>
+      <span class="badge">API Design</span>
+      <span class="badge">Performance Optimization</span>
+      <span class="badge">Agile</span>
+    </div>
+  </div>
+</section>
+
 
   <!-- PROJECTS -->
   <section id="projects">
