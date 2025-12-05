@@ -176,6 +176,17 @@
       border-color: #ffcc66;
       box-shadow: 0 0 15px rgba(255,204,102,0.2);
     }
+    .project-card .btn {
+      margin-top: 15px;
+      display: inline-block;
+      }
+
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #333;
+    }
 
     footer {
       text-align: center;
@@ -199,6 +210,21 @@
     }
   </style>
 </head>
+
+  <script>
+  function openAndDownload() {
+    const resumeURL = "https://yashikalalwani1902.github.io/assets/yashika_resume.pdf";
+
+    window.open(resumeURL, "_blank");
+
+    const a = document.createElement("a");
+    a.href = resumeURL;
+    a.download = "Yashika-Lalwani-Resume.pdf";  // Name of downloaded file
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>
 
 <body>
 
@@ -224,7 +250,7 @@
         <a href="https://linkedin.com/in/yashikalalwani19" target="_blank" style="color:#ffcc66; text-decoration:none; font-weight:500;">LinkedIn</a>
       </p>
 
-      <a class="btn" href="YOUR_RESUME_LINK" target="_blank">Download Resume</a>
+      <a class="btn" href="#" onclick="openAndDownload()" >Download Resume</a>
     </div>
 
     <img src="profile.png" alt="Yashika's Photo" />
@@ -253,11 +279,10 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p style="text-align:center; font-size:1.1rem;">
-      Let's connect! Reach me at:<br><br>
-      <b>yashikalalwani5@gmail.com</b>
-    </p>
+  <h2 class="section-title">Contact</h2>
+  <p style="text-align:center; font-size:1.1rem;">Let's connect! Reach me at:<br><br>
+  <a href="mailto:yashikalalwani5@gmail.com" style="color:#ffcc66; text-decoration:none;"><b>yashikalalwani5@gmail.com</b></a>
+  </p>
   </section>
 
   <footer>
